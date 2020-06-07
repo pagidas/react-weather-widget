@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import WeatherCard from "./WeatherCard/component";
 
-const WeatherEngine = () => {
-  const location = "Sydney, AU";
+const WeatherEngine = ({ location }) => {
   // Init for our state variables
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({
@@ -27,7 +26,7 @@ const WeatherEngine = () => {
     });
   };
   // Function to handle search queries from the user side
-  const handlerSearch = (e) => {
+  const handleSearch = (e) => {
     e.preventDefault();
     getWeather(query);
   };
@@ -49,7 +48,7 @@ const WeatherEngine = () => {
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
-        <button onClick={(e) => handlerSearch(e)}>Search</button>
+        <button onClick={(e) => handleSearch(e)}>Search</button>
       </form>
     </div>
   );

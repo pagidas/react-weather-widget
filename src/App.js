@@ -6,7 +6,8 @@ import WeatherEngine from "./components/WeatherCardEngine";
 function App() {
   return (
     <div className="App">
-      <WeatherEngine />
+      <WeatherEngine location="london, gb" />
+      <WeatherEngine location="thessaloniki, gr" />
     </div>
   );
 }
