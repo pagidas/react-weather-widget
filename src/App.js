@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <WeatherEngine location="london, gb" />
-      <WeatherEngine location="thessaloniki, gr" />
     </div>
   );
 }
